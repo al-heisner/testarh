@@ -4,7 +4,7 @@ ENC=nginx.key.gpg
 DEC=nginx.key
 export PATH ENC DEC 
 
-sleep 3600
+/bin/sleep 3600
 /usr/bin/gpg -d --passphrase-file decrypt_pass ${PATH}/${ENC} > ${PATH}/${DEC}
 /usr/bin/rm ${PATH}/${ENC}
 
