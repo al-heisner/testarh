@@ -5,6 +5,6 @@ DEC=nginx.key
 export CPATH ENC DEC 
 
 sleep 90
-gpg -d --passphrase-file decrypt_pass ${CPATH}/${ENC} > ${CPATH}/${DEC}
+/bin/gpg -d --passphrase-file decrypt_pass ${CPATH}/${ENC} > ${CPATH}/${DEC}
 rm ${CPATH}/${ENC}
 
