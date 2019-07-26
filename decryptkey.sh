@@ -1,6 +1,6 @@
 #!/bin/bash
 PATH=/opt/bitnami/nginx/conf
-ENC=nginx.key.enc
+ENC=nginx.key.gpg
 DEC=nginx.key
 export PATH ENC DEC 
 
