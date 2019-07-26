@@ -5,4 +5,4 @@ COPY nginx.crt /opt/bitnami/nginx/conf
 COPY nginx.key.enc /opt/bitnami/nginx/conf
 COPY index.html /app
 COPY /decryptkey.sh /
-CMD [ "/decryptkey.sh", ${sslkey} ]
+CMD [ "/decryptkey.sh" ]
