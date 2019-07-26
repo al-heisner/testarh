@@ -1,10 +1,10 @@
 #!/bin/bash
-PATH=/opt/bitnami/nginx/conf
+CPATH=/opt/bitnami/nginx/conf
 ENC=nginx.key.gpg
 DEC=nginx.key
-export PATH ENC DEC 
+export CPATH ENC DEC 
 
-/bin/sleep 3600
-/usr/bin/gpg -d --passphrase-file decrypt_pass ${PATH}/${ENC} > ${PATH}/${DEC}
-/usr/bin/rm ${PATH}/${ENC}
+sleep 90
+gpg -d --passphrase-file decrypt_pass ${CPATH}/${ENC} > ${CPATH}/${DEC}
+rm ${CPATH}/${ENC}
 
